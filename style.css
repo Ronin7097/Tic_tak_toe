@@ -1,0 +1,181 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@400;600;700&display=swap");
+
+body {
+    font-family: "Mukta", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    background-color: rgb(80, 20, 137);
+}
+
+
+h1 {
+    @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+    margin: 23px;
+    font-size: 2.5em;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 1000;
+    @media (max-width: 768px) {
+        font-size: 1.3em;
+    }
+}
+.text-shadow {
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: #fff;
+    -webkit-text-stroke-width: 1px;
+    text-shadow: 2px 2px 10px rgb(139, 217, 217);
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+    letter-spacing: 0.2em;
+    animation: flicker 0.5s ease-in-out infinite alternate;
+
+    &:hover {
+        color: #fff;
+    }
+}
+.tags small {
+    @media (max-width: 768px) {
+        font-size: 0.5em;
+    }
+}
+@keyframes flicker {
+    0% {
+        opacity: 0.5;
+        text-shadow: 2px 2px 10px rgb(139, 217, 217);
+    }
+
+    100% {
+        opacity: 1;
+        text-shadow: 2px 2px 20px rgb(139, 217, 217);
+    }
+}
+
+
+
+#heading {
+    display: inline;
+    font-size: 13rem;
+}
+
+#heading p {
+    font-family: "Playwrite AR", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    width: 30%;
+    height: 130px;
+    font-weight: 1000;
+}
+
+/* main box */
+#box {
+    position: absolute;
+    top: 17%;
+    left: 55%;
+    background-color: rgb(34, 8, 59);
+    width: 35%;
+    height: 600px;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+/* score board */
+#scoreboard {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    grid-gap: 0.5rem;
+
+}
+
+.score {
+    margin: 10px;
+    padding: 10px;
+    padding-top: 15px;
+    border-radius: 10px;
+    width: 90px;
+    height: 80px;
+    text-align: center;
+    font-size: large;
+}
+
+/* play */
+#play {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    grid-gap: 1.5rem;
+    margin: 30px;
+}
+
+.play_box {
+    background-color: rgb(119, 105, 130);
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+    border: none;
+    font-size: 70px;
+}
+
+.play_box:hover {
+    width: 100px;
+    height: 100px;
+}
+
+/* button */
+.button-89 {
+    --b: 3px;
+    /* border thickness */
+    --s: .45em;
+    /* size of the corner */
+    --color: #df63dd;
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background: conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 16px;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    display: block;
+    margin: auto;
+}
+
+.button-89:hover,
+.button-89:focus-visible {
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+}
+
+.button-89:active {
+    background: var(--color);
+    color: #fff;
+}
+
+/* crosser and circle */
+i {
+    font-size: 80px;
+}
+
+#cross {
+    color: rgb(53, 212, 223);
+}
+
+#circle {
+    color: rgb(207, 207, 40);
+}
