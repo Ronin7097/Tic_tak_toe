@@ -42,7 +42,7 @@ cell.forEach(function f(cel) {
     cel.disabled = true;
     checkWinners();
     if (move == 9) {
-      checkWinner();
+      checkWinners();
       if(!checkWinners()){
       draw.innerText++;
       document.querySelector("h1").innerText = "Draw";
@@ -66,6 +66,6 @@ const checkWinners = () => {
       }
     }
   }
-  return true;
+  return false;
 };
 newgame.addEventListener("click", enable_all);
